@@ -11,17 +11,20 @@ public class EmployeeMain{
 		EmployeeMain employeeMain = new EmployeeMain();
 
 		int status=employeecontroller.EmployeeStatus();
-		if( status == 1)
-		{
-			System.out.println("present");
-			int workhours=employeecontroller.Employee_Workhours();
-			if( workhours == 8 )
-				System.out.println("fulltime wage of emplloyee is : "+ employeecontroller.Employeewage(workhours));
-			else
-				System.out.println("parttime wage of emplloyee is : "+ employeecontroller.Employeewage(workhours));
+		switch (status){
+			case 0: 
+	                        System.out.println("absent");
+				break;
+			case 1:
+				System.out.println("present");
+				int workhours=employeecontroller.Employee_Workhours();
+				switch (workhours){
+					case 8:
+						System.out.println("fulltime wage of emplloyee is : "+ employeecontroller.Employeewage(workhours));
+						break;
+					default:
+						System.out.println("parttime wage of emplloyee is : "+ employeecontroller.Employeewage(workhours));
+				}
 		}
-		else
-                        System.out.println("absent");
-
 	}
 }
