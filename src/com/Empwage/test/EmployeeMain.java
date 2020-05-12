@@ -14,8 +14,11 @@ public class EmployeeMain{
 		if( status == 1)
 		{
 			System.out.println("present");
-			int dailywage=employeecontroller.Employeewage();
-			System.out.println("daily wage of emplloyee is : "+ dailywage);
+			int workhours=employeecontroller.Employee_Workhours();
+			if( workhours == 8 )
+				System.out.println("fulltime wage of emplloyee is : "+ employeecontroller.Employeewage(workhours));
+			else
+				System.out.println("parttime wage of emplloyee is : "+ employeecontroller.Employeewage(workhours));
 		}
 		else
                         System.out.println("absent");
