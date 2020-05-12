@@ -11,8 +11,9 @@ public class EmployeeMain{
 		int workhours=0;
 		int dailywage=0;
 		int totalwage=0;
+		int totalhours=0;
 
-		for(int days=0; days<20; days++){
+		for(int days=0; days<20 && totalhours<100; days++){
 
 			Employee employee = new Employee();
 			Employeecontroller employeecontroller = new Employeecontroller();
@@ -26,6 +27,7 @@ public class EmployeeMain{
 				case 1:
 					//System.out.println("present");
 					workhours=employeecontroller.Employee_Workhours();
+					totalhours+=workhours;
 					/*switch (workhours){
 						case 8:
 							System.out.println("fulltime wage of emplloyee is : "+ employeecontroller.Employeewage(workhours));
@@ -36,7 +38,12 @@ public class EmployeeMain{
 					totalwage+=employeecontroller.Employeewage(workhours);
 			}
 	}
-	 System.out.println("monthly wage is : "+ totalwage);
 
+	if(totalhours<100)
+		System.out.println("monthly wage is : "+ totalwage);
+	else{
+		totalwage=2000;
+	 System.out.println("monthly wage is : "+ totalwage);
+	}
 	}
 }
