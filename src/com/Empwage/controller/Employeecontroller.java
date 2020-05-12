@@ -1,6 +1,7 @@
 
 package com.Empwage.controller;
 import com.Empwage.model.Employee;
+import com.Empwage.test.EmployeeMain;
 public class Employeecontroller{
 
 	public int EmployeeStatus(){
@@ -19,4 +20,6 @@ public class Employeecontroller{
 		int dailywage=hours*20;
 		return dailywage;
 	}
+
+
 }
