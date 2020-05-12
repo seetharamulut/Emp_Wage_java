@@ -9,9 +9,14 @@ public class Employeecontroller{
 		return status;
 	}
 
-	public int Employeewage(){
+	public int Employee_Workhours(){
+		int workhours=((int)((Math.random()*10)%8)+1);
+		return workhours;
+	}
 
-		int dailywage=((int)((Math.random()*10)%8)+1)*20;
+	public int Employeewage(int hours){
+
+		int dailywage=hours*20;
 		return dailywage;
 	}
 }
