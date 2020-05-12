@@ -8,10 +8,17 @@ public class EmployeeMain{
 
 		Employee employee = new Employee();
 		Employeecontroller employeecontroller = new Employeecontroller();
+		EmployeeMain employeeMain = new EmployeeMain();
+
 		int status=employeecontroller.EmployeeStatus();
 		if( status == 1)
+		{
 			System.out.println("present");
+			int dailywage=employeecontroller.Employeewage();
+			System.out.println("daily wage of emplloyee is : "+ dailywage);
+		}
 		else
-			System.out.println("absent");
+                        System.out.println("absent");
+
 	}
 }
