@@ -5,6 +5,7 @@ import com.Empwage.test.EmployeeMain;
 public class Employeecontroller{
 
 	public int monthlywage =0;
+	public int total_hours =0;
 
 	public int EmployeeStatus(){
 
@@ -18,15 +19,15 @@ public class Employeecontroller{
 	}
 
 	public int Employeewage(int hours){
-
+		total_hours+=hours;
 		int dailywage=hours*20;
 		return dailywage;
 	}
 
 	public void Employee_Monthlywage(int dailywage){
-
-		monthlywage+=dailywage;
-
-
+		if(total_hours == 100)
+			monthlywage=2000;
+		else
+			monthlywage+=dailywage;
 	}
 }
