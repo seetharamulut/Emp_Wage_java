@@ -6,6 +6,7 @@ public class Employee{
         private int status;
 	private int dailywage;
 	private int workhours;
+	private int monthlywage;
 
         public int EmployeeStatus(){
                 this.status=status;
@@ -22,5 +23,8 @@ public class Employee{
 		return workhours;
 	}
 
-
+	public int Employee_monthlywage(){
+		this.monthlywage=monthlywage;
+		return monthlywage;
+	}
 }

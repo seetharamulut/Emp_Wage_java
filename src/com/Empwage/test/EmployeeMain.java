@@ -10,13 +10,13 @@ public class EmployeeMain{
 		int status=0;
 		int workhours=0;
 		int dailywage=0;
-		int totalwage=0;
+
+
+                Employee employee = new Employee();
+                Employeecontroller employeecontroller = new Employeecontroller();
 
 		for(int days=0; days<20; days++){
 
-			Employee employee = new Employee();
-			Employeecontroller employeecontroller = new Employeecontroller();
-			EmployeeMain employeeMain = new EmployeeMain();
 
 			status=employeecontroller.EmployeeStatus();
 			switch (status){
@@ -33,10 +33,11 @@ public class EmployeeMain{
 						default:
 							System.out.println("parttime wage of emplloyee is : "+ employeecontroller.Employeewage(workhours));
 					}*/
-					totalwage+=employeecontroller.Employeewage(workhours);
+					dailywage=employeecontroller.Employeewage(workhours);
+					employeecontroller.Employee_Monthlywage(dailywage);
 			}
 	}
-	 System.out.println("monthly wage is : "+ totalwage);
+	 System.out.println("monthly wage is : "+ employeecontroller.monthlywage);
 
 	}
 }

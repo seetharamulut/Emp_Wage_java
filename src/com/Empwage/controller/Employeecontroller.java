@@ -4,6 +4,8 @@ import com.Empwage.model.Employee;
 import com.Empwage.test.EmployeeMain;
 public class Employeecontroller{
 
+	public int monthlywage =0;
+
 	public int EmployeeStatus(){
 
 		int status=(int)(Math.random()*10)%2;
@@ -21,5 +23,10 @@ public class Employeecontroller{
 		return dailywage;
 	}
 
+	public void Employee_Monthlywage(int dailywage){
 
+		monthlywage+=dailywage;
+
+
+	}
 }
